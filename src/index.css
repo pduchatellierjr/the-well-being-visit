@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #FDFBF7;
+  color: #2D2D2D;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btn-primary {
+  @apply bg-therapyRed text-cream px-6 py-3 rounded-md font-sans text-sm tracking-wide transition-all duration-300 hover:bg-[#D43B47] shadow-[0_4px_14px_rgba(232,72,85,0.3)];
+}
+
+.btn-secondary {
+  @apply border border-therapyRed text-therapyRed bg-transparent px-6 py-3 rounded-md font-sans text-sm tracking-wide transition-all duration-300 hover:bg-softCrimson/30;
+}
+
