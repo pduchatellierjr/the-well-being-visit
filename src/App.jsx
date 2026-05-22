@@ -222,7 +222,7 @@ const Hero = () => {
         <div className="flex-1 w-full max-w-md relative">
           <div className="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(106,13,173,0.3)] relative border border-neonPurple/20 bg-deepBlack">
             <img 
-              src={heroImg} 
+              src="https://res.cloudinary.com/dxdo7bfpd/image/upload/v1779470128/emma-simpson-mNGaaLeWEp0-unsplash_umsbod.jpg" 
               alt="Organic wellness lifestyle"
               className="w-full h-full object-cover opacity-90"
             />
