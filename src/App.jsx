@@ -1,5 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { ChevronRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 import heroImg from './assets/hero.jpg';
 import myStoryImg from './assets/my story.jpg';
 
@@ -191,6 +192,23 @@ const Navbar = () => {
 
 // --- HERO ---
 const Hero = () => {
+  const [titleNumber, setTitleNumber] = useState(0);
+  const titles = useMemo(
+    () => ["clarity.", "vitality.", "balance.", "energy.", "focus."],
+    []
+  );
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      if (titleNumber === titles.length - 1) {
+        setTitleNumber(0);
+      } else {
+        setTitleNumber(titleNumber + 1);
+      }
+    }, 2000);
+    return () => clearTimeout(timeoutId);
+  }, [titleNumber, titles]);
+
   return (
     <section className="relative overflow-hidden pb-24 pt-32 px-6 min-h-[90vh] flex items-center">
       {/* Full Background Image */}
@@ -215,9 +233,24 @@ const Hero = () => {
           <p className="font-sans text-sm tracking-widest text-therapyRed uppercase font-semibold drop-shadow-[0_0_5px_rgba(232,72,85,0.5)]">
             Functional Health Coaching
           </p>
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-cream leading-tight">
-            Healing through <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-therapyRed to-softCrimson relative inline-block drop-shadow-[0_0_15px_rgba(232,72,85,0.4)]">
-              clarity.
+          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-cream leading-tight flex flex-col items-center">
+            <span>Healing through</span>
+            <span className="relative flex justify-center overflow-hidden h-[1.3em] w-full italic text-transparent bg-clip-text bg-gradient-to-r from-therapyRed to-softCrimson drop-shadow-[0_0_15px_rgba(232,72,85,0.4)] px-4">
+              {titles.map((title, index) => (
+                <motion.span
+                  key={index}
+                  className="absolute"
+                  initial={{ opacity: 0, y: "-100%" }}
+                  transition={{ type: "spring", stiffness: 50 }}
+                  animate={
+                    titleNumber === index
+                      ? { y: 0, opacity: 1 }
+                      : { y: titleNumber > index ? "-150%" : "150%", opacity: 0 }
+                  }
+                >
+                  {title}
+                </motion.span>
+              ))}
             </span>
           </h1>
           <p className="font-sans text-lg md:text-xl text-cream/90 max-w-xl leading-relaxed font-light">
