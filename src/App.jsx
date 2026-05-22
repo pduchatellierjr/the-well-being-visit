@@ -196,7 +196,7 @@ const Hero = () => {
       {/* Full Background Image */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url("https://res.cloudinary.com/dxdo7bfpd/image/upload/v1779470128/emma-simpson-mNGaaLeWEp0-unsplash_umsbod.jpg")' }}
+        style={{ backgroundImage: 'url("https://res.cloudinary.com/dxdo7bfpd/image/upload/v1779479629/wellbeing-silhouette-image-4k_hwzaff.jpg")' }}
       ></div>
       
       {/* Dark Overlay for readability */}
