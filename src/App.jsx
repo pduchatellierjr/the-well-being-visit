@@ -235,7 +235,7 @@ const Hero = () => {
           </p>
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-cream leading-tight flex flex-col items-center">
             <span>Healing through</span>
-            <span className="relative overflow-hidden h-[1.3em] w-full px-4 mt-2">
+            <span className="relative overflow-hidden h-[1.5em] w-full px-8 py-2 mt-2">
               {titles.map((title, index) => (
                 <motion.span
                   key={index}
