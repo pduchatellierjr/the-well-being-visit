@@ -171,7 +171,7 @@ export function ShaderAnimation() {
 // --- NAVBAR ---
 const Navbar = () => {
   return (
-    <nav className="w-full bg-deepBlack/50 backdrop-blur-md sticky top-0 z-50 border-b border-neonPurple/20 absolute">
+    <nav className="w-full bg-transparent absolute top-0 left-0 z-50 pt-4">
       <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
         <div className="font-serif italic text-2xl text-cream tracking-wide flex items-center gap-2">
           <div className="w-2 h-2 rounded-full bg-therapyRed shadow-[0_0_10px_rgba(232,72,85,0.8)]"></div>
