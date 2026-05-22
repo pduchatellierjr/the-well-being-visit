@@ -192,45 +192,43 @@ const Navbar = () => {
 // --- HERO ---
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-br from-deepBlack via-[#150A21] to-deepPurple relative overflow-hidden pb-24 pt-32 px-6 min-h-[90vh] flex items-center">
+    <section className="relative overflow-hidden pb-24 pt-32 px-6 min-h-[90vh] flex items-center">
+      {/* Full Background Image */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url("https://res.cloudinary.com/dxdo7bfpd/image/upload/v1779470128/emma-simpson-mNGaaLeWEp0-unsplash_umsbod.jpg")' }}
+      ></div>
+      
+      {/* Dark Overlay for readability */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-deepBlack/95 via-deepBlack/80 to-deepPurple/80"></div>
+
       {/* Shader Animation Background */}
-      <ShaderAnimation />
+      <div className="absolute inset-0 z-0 opacity-40 mix-blend-screen pointer-events-none">
+        <ShaderAnimation />
+      </div>
 
       {/* Black & Purple Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] bg-gradient-radial from-neonPurple/15 via-therapyRed/5 to-transparent blur-[100px] pointer-events-none rounded-full z-0"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[100vw] md:w-[80vw] md:h-[80vw] bg-gradient-radial from-neonPurple/20 via-therapyRed/10 to-transparent blur-[100px] pointer-events-none rounded-full z-0"></div>
 
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16 relative z-10 w-full">
-        <div className="flex-1 space-y-8">
+      <div className="max-w-6xl mx-auto flex flex-col justify-center items-center text-center gap-10 relative z-10 w-full mt-10">
+        <div className="space-y-8 max-w-3xl flex flex-col items-center">
           <p className="font-sans text-sm tracking-widest text-therapyRed uppercase font-semibold drop-shadow-[0_0_5px_rgba(232,72,85,0.5)]">
             Functional Health Coaching
           </p>
-          <h1 className="font-serif text-5xl md:text-7xl text-cream leading-tight">
+          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-cream leading-tight">
             Healing through <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-therapyRed to-softCrimson relative inline-block drop-shadow-[0_0_15px_rgba(232,72,85,0.4)]">
               clarity.
             </span>
           </h1>
-          <p className="font-sans text-lg text-cream/80 max-w-md leading-relaxed font-light">
+          <p className="font-sans text-lg md:text-xl text-cream/90 max-w-xl leading-relaxed font-light">
             Fix the root cause of gut and energy issues. Regain consistent energy and vitality without relying on quick fixes.
           </p>
-          <div className="pt-4 flex items-center gap-6">
+          <div className="pt-8 flex flex-col sm:flex-row items-center gap-6">
             <a href="#packages" className="btn-primary">View Packages</a>
             <a href="#story" className="font-sans text-sm tracking-wide text-cream hover:text-therapyRed transition-colors flex items-center gap-2 group">
               Read My Story <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
-        </div>
-        <div className="flex-1 w-full max-w-md relative">
-          <div className="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(106,13,173,0.3)] relative border border-neonPurple/20 bg-deepBlack">
-            <img 
-              src="https://res.cloudinary.com/dxdo7bfpd/image/upload/v1779470128/emma-simpson-mNGaaLeWEp0-unsplash_umsbod.jpg" 
-              alt="Organic wellness lifestyle"
-              className="w-full h-full object-cover opacity-90"
-            />
-            {/* Purple/Red overlay over image */}
-            <div className="absolute inset-0 bg-gradient-to-t from-deepPurple/60 via-therapyRed/10 to-transparent mix-blend-color-burn"></div>
-          </div>
-          {/* Accent circles */}
-          <div className="absolute -bottom-6 -left-6 w-32 h-32 border border-neonPurple/30 rounded-full blur-[1px]"></div>
         </div>
       </div>
     </section>
