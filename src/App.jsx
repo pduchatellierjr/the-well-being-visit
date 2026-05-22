@@ -183,7 +183,7 @@ const Navbar = () => {
           <a href="#story" className="hover:text-cream transition-colors">My Story</a>
         </div>
         <a href="https://my.practicebetter.io/#/6a060b207f0211c5a9119095/forms?f=6a0610b41d3c13bde41aefb9" target="_blank" rel="noopener noreferrer" className="btn-primary">
-          Book Consultation
+          Book a Free Consultation
         </a>
       </div>
     </nav>
