@@ -235,11 +235,11 @@ const Hero = () => {
           </p>
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-cream leading-tight flex flex-col items-center">
             <span>Healing through</span>
-            <span className="relative flex justify-center overflow-hidden h-[1.3em] w-full italic text-transparent bg-clip-text bg-gradient-to-r from-therapyRed to-softCrimson drop-shadow-[0_0_15px_rgba(232,72,85,0.4)] px-4">
+            <span className="relative overflow-hidden h-[1.3em] w-full px-4 mt-2">
               {titles.map((title, index) => (
                 <motion.span
                   key={index}
-                  className="absolute"
+                  className="absolute inset-x-0 text-center italic text-transparent bg-clip-text bg-gradient-to-r from-therapyRed to-softCrimson drop-shadow-[0_0_15px_rgba(232,72,85,0.4)]"
                   initial={{ opacity: 0, y: "-100%" }}
                   transition={{ type: "spring", stiffness: 50 }}
                   animate={
