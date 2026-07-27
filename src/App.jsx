@@ -603,6 +603,8 @@ const Footer = ({ onOpenPrivacy }) => {
         <div className="flex flex-col gap-4 font-sans text-sm font-light">
           <span className="font-medium text-therapyRed uppercase tracking-widest mb-2 text-xs drop-shadow-[0_0_5px_rgba(232,72,85,0.5)]">Resources</span>
           <a href="https://thewellbeingvisit-toolkit.netlify.app/#home" target="_blank" rel="noopener noreferrer" className="text-cream/70 hover:text-white transition-colors">Toolkit</a>
+          <a href="https://assessment.thewellbeingvisit.com/" target="_blank" rel="noopener noreferrer" className="text-cream/70 hover:text-white transition-colors">Assessment</a>
+          <a href="https://twbv-rebel-method.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-cream/70 hover:text-white transition-colors">R.E.B.E.L. Method</a>
         </div>
         <div className="flex flex-col gap-4 font-sans text-sm font-light">
           <span className="font-medium text-therapyRed uppercase tracking-widest mb-2 text-xs drop-shadow-[0_0_5px_rgba(232,72,85,0.5)]">Connect</span>
