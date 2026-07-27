@@ -583,7 +583,7 @@ const Footer = ({ onOpenPrivacy }) => {
     <footer className="bg-gradient-to-t from-deepBlack to-deepPurple pt-20 pb-10 px-6 text-cream relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-gradient-radial from-neonPurple/10 to-transparent blur-[100px] pointer-events-none"></div>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-16 relative z-10">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mb-16 relative z-10">
         <div>
           <div className="font-serif italic text-2xl mb-4 flex items-center gap-2 drop-shadow-[0_0_10px_rgba(232,72,85,0.5)]">
             <div className="w-2 h-2 rounded-full bg-therapyRed"></div>
@@ -599,6 +599,10 @@ const Footer = ({ onOpenPrivacy }) => {
           <a href="#packages" className="text-cream/70 hover:text-white transition-colors">Packages</a>
           <a href="#story" className="text-cream/70 hover:text-white transition-colors">My Story</a>
           <a href="https://my.practicebetter.io/#/6a060b207f0211c5a9119095/forms?f=6a0610b41d3c13bde41aefb9" target="_blank" rel="noopener noreferrer" className="text-cream/70 hover:text-white transition-colors">Book Now</a>
+        </div>
+        <div className="flex flex-col gap-4 font-sans text-sm font-light">
+          <span className="font-medium text-therapyRed uppercase tracking-widest mb-2 text-xs drop-shadow-[0_0_5px_rgba(232,72,85,0.5)]">Resources</span>
+          <a href="https://thewellbeingvisit-toolkit.netlify.app/#home" target="_blank" rel="noopener noreferrer" className="text-cream/70 hover:text-white transition-colors">Toolkit</a>
         </div>
         <div className="flex flex-col gap-4 font-sans text-sm font-light">
           <span className="font-medium text-therapyRed uppercase tracking-widest mb-2 text-xs drop-shadow-[0_0_5px_rgba(232,72,85,0.5)]">Connect</span>
